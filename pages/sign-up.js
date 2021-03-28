@@ -1,21 +1,22 @@
 import React from "react";
-import Link from "next/link"
-import Button from "../src/components/buttons/button"
+import Link from "next/link";
+import Button from "../src/components/Sub-Components/button";
+
 function SignUp() {
-    return (
-        <React.Fragment>
-            <h1>Sign up</h1>
-            <Link href="/">
-               <a>Home</a>
-            </Link>
-            <Button name="Submit"/>
-        </React.Fragment>
-    );
+	return (
+		<>
+			<h1>Sign up</h1>
+			<Link href="/">
+				<a>Home</a>
+			</Link>{" "}
+			<Button name="Submit" />
+		</>
+	);
 }
 
 export async function getServerSideProps(context) {
-   return{
-       props:{}
-   }
+	return {
+		props: {},
+	};
 }
 export default SignUp;
