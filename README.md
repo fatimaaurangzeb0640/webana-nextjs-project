@@ -2,4 +2,5 @@
 Webana web project
 
 npm install 
+
 npm run dev
