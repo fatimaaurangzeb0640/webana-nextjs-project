@@ -1,14 +1,16 @@
-import "../public/app/styles/sass/main.scss";
-import PropTypes from "prop-types";
-import React from "react";
-// import Layout from "../src/components/Main-Components/Layout";
+import Layout from "../src/components/Global-components/Layout";
+
+// Add global style sheet
+import "../styles/main.scss";
 
 // eslint-disable-next-line react/prop-types
 
 function MyApp({ Component, pageProps }) {
 	return (
 		<>
-			<Component {...pageProps} />
+			<Layout>
+				<Component {...pageProps} />
+			</Layout>
 		</>
 	);
 }
