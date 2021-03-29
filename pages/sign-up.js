@@ -1,8 +1,7 @@
-import React from "react";
 import Link from "next/link";
-import Button from "../src/components/Sub-Components/button";
+import Button from "../src/components/Reuse-components/button";
 
-function SignUp() {
+const signUp = () => {
 	return (
 		<>
 			<h1>Sign up</h1>
@@ -12,11 +11,11 @@ function SignUp() {
 			<Button name="Submit" />
 		</>
 	);
-}
+};
 
 export async function getServerSideProps(context) {
 	return {
 		props: {},
 	};
 }
-export default SignUp;
+export default signUp;
