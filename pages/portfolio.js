@@ -14,7 +14,8 @@ function portfolio() {
         <div>
             <h1>Portfolio</h1>
             {images.map(function(image, i){
-        return <PortfolioCard imageSrc={image.src} imageAlt={image.alt} height={480} width={330} type={"portfolio"}></PortfolioCard>;
+        return (<PortfolioCard imageSrc={image.src} imageAlt={image.alt} ></PortfolioCard>
+               );
     })}
         </div>
     )

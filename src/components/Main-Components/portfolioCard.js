@@ -36,7 +36,7 @@ function PortfolioCard(props) {
 			  }
 			 
 		   `}
-			 src={props.imageSrc} alt={props.imageAlt} height={props.height} width={props.width} />
+			 src={props.imageSrc} alt={props.imageAlt} height={480} width={330} />
 			
 		</div>
 	);
