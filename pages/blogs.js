@@ -7,13 +7,13 @@ import CardText from "../src/components/Sub-Components/CardText"
 function caseStudy() {
      
     const images = [
-        { id: 1, src: "/images/caseStudy/CaseStudy1.png", alt:"Image 1", text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin aliquet magna"},
-        { id: 2, src: "/images/caseStudy/CaseStudy2.png", alt:"Image 2", text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin aliquet magna" },
-        { id: 3, src: "/images/caseStudy/CaseStudy3.png", alt:"Image 3", text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin aliquet magna" },
+        { id: 1, src: "/images/blogs/Blog.png", alt:"Image 1", text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin aliquet magna"},
+        { id: 2, src: "/images/blogs/Blog.png", alt:"Image 2", text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin aliquet magna" },
+        { id: 3, src: "/images/blogs/Blog.png", alt:"Image 3", text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin aliquet magna" },
       ]
     return (
         <div>
-            <h1>Case Study</h1>
+            <h1>Latest Blog Post</h1>
             {images.map(function(image, i){
         return (
                 <div css={css`
@@ -40,8 +40,8 @@ function caseStudy() {
         
                     `
                 }>
-                    <CardImage imageSrc={image.src} imageAlt={image.alt} type={"caseStudy"} height={410} width={410}></CardImage>
-                    <CardText text={image.text} type={"caseStudy"}></CardText>
+                    <CardImage imageSrc={image.src} imageAlt={image.alt} width={400} height={200} type={"blogs"} ></CardImage>
+                    <CardText text={image.text} type={"blogs"}></CardText>
                 </div>
                     );
     })}

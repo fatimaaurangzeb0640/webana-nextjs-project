@@ -1,5 +1,5 @@
 import React from 'react'
-import PortfolioCard from "../src/components/Main-Components/portfolioCard"
+import CardImage from "../src/components/Main-Components/CardImage"
 
 function portfolio() {
      
@@ -14,7 +14,7 @@ function portfolio() {
         <div>
             <h1>Portfolio</h1>
             {images.map(function(image, i){
-        return (<PortfolioCard imageSrc={image.src} imageAlt={image.alt} ></PortfolioCard>
+        return (<CardImage imageSrc={image.src} imageAlt={image.alt} type={"portfolio"} height={480} width={330}></CardImage>
                );
     })}
         </div>
