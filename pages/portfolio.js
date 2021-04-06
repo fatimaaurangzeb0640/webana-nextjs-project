@@ -1,4 +1,6 @@
 import React from 'react'
+/** @jsx jsx */
+import { css, jsx } from '@emotion/react'
 import CardImage from "../src/components/Main-Components/CardImage"
 
 function portfolio() {
@@ -13,10 +15,7 @@ function portfolio() {
     return (
         <div>
             <h1>Portfolio</h1>
-            {images.map(function(image, i){
-        return (<CardImage imageSrc={image.src} imageAlt={image.alt} type={"portfolio"} height={480} width={330}></CardImage>
-               );
-    })}
+            {images.map((image) => <CardImage key={image.id} imageSrc={image.src} imageAlt={image.alt} type={"portfolio"} height={480} width={330}></CardImage>)}
         </div>
     )
 }
