@@ -1,7 +1,9 @@
 import React from "react"
 /** @jsx jsx */
 import { css, jsx } from '@emotion/react'
+import styled from '@emotion/styled'
 import Link from "next/link"
+
 
 
 const portfolio = css`
@@ -90,9 +92,9 @@ const caseStudy = css`margin-left: 10px;
 
 const blogs = css`margin-left: 30px;
 
-			&:hover {
+			/*&:hover {
 			border:5px green solid;
-			}
+			}*/
 			@media (max-width: 1600px) {
 				width: 380px;
 			}
@@ -122,7 +124,48 @@ const blogs = css`margin-left: 30px;
 			@media (max-width: 600px) {
 				width: 140px;
 				}
+
 	`
+   const BlogsBackground = styled.img`margin-left: 30px;
+   position: relative;
+   top: -220px;
+   left: -5px;
+   /*left: ${props => props.count===0? '0px' : props.count===1? '0px': '0px'};*/
+  /* top: ${props => props.count===0? '100px' : props.count===1? '0px': '0px'};*/ 
+
+
+							/*&:hover {
+							border:5px green solid;
+							}*/
+							@media (max-width: 1600px) {
+								width: 390px;
+							}
+							@media (max-width: 1500px) {
+								width: 350px;
+							}
+							@media (max-width: 1400px) {
+								width: 320px;
+							}
+							@media (max-width: 1300px) {
+							width: 290px;
+							}
+							@media (max-width: 1200px) {
+							width: 270px;
+							}
+							@media (max-width: 1050px) {
+							width: 240px;
+							}
+							@media (max-width: 900px) {
+							width: 210px;
+							}
+							
+							@media (max-width: 750px) {
+							width: 180px;
+							}
+
+							@media (max-width: 600px) {
+								width: 150px;
+								}`
 	
 	
 function CardImage(props) {
@@ -137,10 +180,11 @@ function CardImage(props) {
 				<img css={caseStudy}
 				src={props.imageSrc} alt={props.imageAlt} height={props.height} width={props.width} />:
 				props.type==="blogs"?
-				<Link href="/blog">
 				<img css={blogs}
-				src={props.imageSrc} alt={props.imageAlt} height={props.height} width={props.width}  />
-				</Link>:
+				src={props.imageSrc} alt={props.imageAlt} height={props.height} width={props.width}  />:
+				props.type==="blogs-background"?
+				<BlogsBackground count={imageId}
+				src={props.imageSrc} alt={props.imageAlt} height={props.height} width={props.width}  />:
 				<p>Image not found</p>
 			 }
 		</div>

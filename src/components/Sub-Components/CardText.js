@@ -50,6 +50,8 @@ const caseStudy = css`
               `
   const blogs = css`
               /*border: 1px black solid;*/
+              position: relative;
+              top: -220px;
               width: 350px;
               margin-left: 40px;
               padding-left: 30px;
