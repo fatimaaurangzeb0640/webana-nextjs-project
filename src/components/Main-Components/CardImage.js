@@ -183,8 +183,10 @@ function CardImage(props) {
 				<img css={blogs}
 				src={props.imageSrc} alt={props.imageAlt} height={props.height} width={props.width}  />:
 				props.type==="blogs-background"?
+				<Link href="/blog">
 				<BlogsBackground count={imageId}
-				src={props.imageSrc} alt={props.imageAlt} height={props.height} width={props.width}  />:
+				src={props.imageSrc} alt={props.imageAlt} height={props.height} width={props.width}  />
+				</Link>:
 				<p>Image not found</p>
 			 }
 		</div>
