@@ -13,11 +13,7 @@ function caseStudy() {
         { id: 3, src: "/images/caseStudy/CaseStudy3.png", alt:"Image 3", text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin aliquet magna" },
       ]
 
-    const CaseStudyHeading = styled.h1`
-    position: relative;  
    
-    /*margin-left:20px;*/
-      color: green;`
     
       const CaseStudy = styled.div`
         /*float: left;*/
@@ -78,8 +74,8 @@ function caseStudy() {
               backgroundPosition:"center",
               backgroundSize: "cover",
               backgroundAttachment: "fixed",
-              marginTop:"-30px"}}>
-          <CaseStudyHeading> Case Study </CaseStudyHeading>
+              marginBottom: "-20px"}}>
+         
           
             {images.map(function(image, i){
         return (

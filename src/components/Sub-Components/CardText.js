@@ -49,11 +49,11 @@ const caseStudy = css`
                 }
               `
   const blogs = css`
-              /*border: 1px black solid;*/
+              /*border: 1px white solid;*/
               position: relative;
               top: -220px;
               width: 350px;
-              margin-left: 40px;
+              margin-left: 55px;
               padding-left: 30px;
               font-size:18px;
               color: white;
@@ -61,16 +61,18 @@ const caseStudy = css`
               @media (max-width: 1600px) {
                 width: 330px;
                 padding-left: 20px;
-                margin-left: 30px;
+               /* margin-left: 30px;*/
               }
               
               @media (max-width: 1500px) {
                 width: 310px;
+                margin-left: 40px;
+                
               }
               
               @media (max-width: 1400px) {
                 width: 280px;
-                margin-left: 25px;
+                margin-left: 50px;
               }
 
               @media (max-width: 1300px) {
@@ -79,10 +81,11 @@ const caseStudy = css`
 
               @media (max-width: 1200px) {
                 width: 230px;
+                margin-left: 40px;
               }
               
               @media (max-width: 1050px) {
-                margin-left: 23px;
+                /*margin-left: 23px;*/
                 width: 200px;
               }
               @media (max-width: 900px) {
@@ -94,7 +97,7 @@ const caseStudy = css`
               }
               @media (max-width: 600px) {
                 width: 120px;
-                margin-left: 15px;
+                margin-left: 32px;
               }
               `
 function CardText(props) {

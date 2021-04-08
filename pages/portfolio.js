@@ -68,11 +68,7 @@ function portfolio() {
                         height:"100%", backgroundRepeat:"no-repeat", 
                         backgroundPosition:"center",
                         backgroundSize: "cover",
-                        backgroundAttachment: "fixed",
-                        marginTop:"-30px"}}>
-            <h1 css={css`color: green`}>
-              Portfolio
-            </h1>
+                        backgroundAttachment: "fixed",}}>
             
             {images.map(function(image, i) {
                 return(

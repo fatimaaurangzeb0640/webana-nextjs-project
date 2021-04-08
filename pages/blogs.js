@@ -17,8 +17,8 @@ function blogs() {
       const Blogs = styled.div`
       position: relative;
       left: ${props => props.count===0? '180px' : props.count===1? '640px': '1100px'};
-      top: ${props => props.count===0? '249px' : props.count===1? '-276px': '-800px'}; 
-      border: 1px white solid;
+      top: ${props => props.count===0? '249px' : props.count===1? '-278px': '-805px'}; 
+      /*border: 1px white solid;*/
       /*margin-left: 15px;*/
 
         @media (max-width: 1600px) {
@@ -70,11 +70,9 @@ function blogs() {
               backgroundPosition:"center",
               backgroundSize: "cover",
               backgroundAttachment: "fixed",
-              marginTop:"-30px"}}>
-            <h1 css={css`color: green;`
-                      }>
-              Latest Blog Post
-            </h1>
+              marginBottom: "-20px"
+              }}>
+
             {images.map(function(image, i){
         return (
                 <Blogs key={image.id} count={i} >
