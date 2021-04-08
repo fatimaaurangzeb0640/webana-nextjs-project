@@ -14,7 +14,10 @@ function caseStudy() {
       ]
 
     const CaseStudyHeading = styled.h1`
-      margin-left:20px`
+    position: relative;  
+   
+    /*margin-left:20px;*/
+      color: green;`
     
       const CaseStudy = styled.div`
         /*float: left;*/
@@ -70,7 +73,12 @@ function caseStudy() {
           }
           `
     return (
-        <div>
+        <div  style={{  backgroundImage: "url(/images/Background2.png)", 
+              height:"100%", backgroundRepeat:"no-repeat", 
+              backgroundPosition:"center",
+              backgroundSize: "cover",
+              backgroundAttachment: "fixed",
+              marginTop:"-30px"}}>
           <CaseStudyHeading> Case Study </CaseStudyHeading>
           
             {images.map(function(image, i){

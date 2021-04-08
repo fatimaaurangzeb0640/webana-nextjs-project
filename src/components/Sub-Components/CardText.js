@@ -8,7 +8,7 @@ const caseStudy = css`
                 margin-left: 40px;
                 padding-left: 30px;
                 font-size:18px;
-                
+                color: white;
                 @media (max-width: 1600px) {
                   width: 330px;
                   padding-left: 20px;
@@ -54,6 +54,7 @@ const caseStudy = css`
               margin-left: 40px;
               padding-left: 30px;
               font-size:18px;
+              color: white;
               
               @media (max-width: 1600px) {
                 width: 330px;

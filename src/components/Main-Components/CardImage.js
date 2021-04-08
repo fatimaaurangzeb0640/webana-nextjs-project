@@ -3,34 +3,57 @@ import React from "react"
 import { css, jsx } from '@emotion/react'
 import Link from "next/link"
 
-const portfolio = css`margin-left: 10px;
+
+const portfolio = css`
+					&:hover {
+						filter: blur(2px);
+						}                     
+					/*margin-left: 10px;
                       float:left; 
 						&:hover {
 						filter: blur(2px);
+						}*/
+						@media (max-width: 1600px) {
+						width: 240px;
 						}
-						@media (max-width: 1700px) {
-						margin-left: 5px;
-						width: 280px;
-						}
-						@media (max-width: 1500px) {
-						margin-left: 5px;
+						@media (max-width: 1450px) {
 						width: 220px;
 						}
-						@media (max-width: 1200px) {
-						margin-left: 5px;
-						width: 170px;
+						@media (max-width: 1300px) {
+						width: 200px;
 						}
-						@media (max-width: 1000px) {
-						margin-left: 5px;
-						width: 120px;
+						@media (max-width: 1180px) {
+						width: 180px;
 						}
-						@media (max-width: 800px) {
-						margin-left: 5px;
-						width: 80px;
-						}`
+						@media (max-width: 1070px) {
+						width: 160px;
+						}
+						@media (max-width: 960px) {
+							width: 150px;
+						}
+						@media (max-width: 890px) {
+							width: 140px;
+						}
+						@media (max-width: 825px) {
+							width: 130px;
+						}
+						@media (max-width: 770px) {
+							width: 100px;
+						}
+						@media (max-width: 660px) {
+							width: 90px;
+						}
+						@media (max-width: 590px) {
+							width: 80px;
+						}
+						@media (max-width: 560px) {
+							width: 70px;
+						}
+						`
 			
 const caseStudy = css`margin-left: 10px;
-             
+                    /*border-right: 5px green solid;
+					border-left: 5px green solid;*/
 					&:hover {
 					border:5px green solid;
 					}

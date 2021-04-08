@@ -64,8 +64,15 @@ function blogs() {
 
                   `
     return (
-        <div>
-            <h1>Latest Blog Post</h1>
+        <div  style={{  backgroundImage: "url(/images/Background2.png)", 
+              height:"100%", backgroundRepeat:"no-repeat", 
+              backgroundPosition:"center",
+              backgroundSize: "cover",
+              backgroundAttachment: "fixed",
+              marginTop:"-30px"}}>
+            <h1 css={css`color: green`}>
+              Latest Blog Post
+            </h1>
             {images.map(function(image, i){
         return (
                 <Blogs key={image.id} count={i} >
