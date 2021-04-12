@@ -5,17 +5,15 @@ import styled from '@emotion/styled'
 import Link from "next/link"
 
 
-
 const portfolio = css`
-					&:hover {
+
+                    height: 25.625rem;
+					width: 16.25rem;
+					/*&:hover {
 						filter: blur(2px);
-						}                     
-					/*margin-left: 10px;
-                      float:left; 
-						&:hover {
-						filter: blur(2px);
-						}*/
-						@media (max-width: 1600px) {
+					}*/   
+
+						/*@media (max-width: 1600px) {
 						width: 240px;
 						}
 						@media (max-width: 1450px) {
@@ -51,14 +49,20 @@ const portfolio = css`
 						@media (max-width: 560px) {
 							width: 70px;
 						}
+						*/
 						`
 			
-const caseStudy = css`margin-left: 10px;
+const caseStudy = css`
+                   margin-left: 2px;
                     /*border-right: 5px green solid;
 					border-left: 5px green solid;*/
-					&:hover {
+					/*border-top: 5px green solid;*/
+					/*display: inline-block;*/
+                    position: relative;
+
+					/*&:hover {
 					border:5px green solid;
-					}
+					}*/
 					@media (max-width: 1600px) {
 						width: 380px;
 					}
@@ -89,12 +93,37 @@ const caseStudy = css`margin-left: 10px;
 						width: 140px;
 						}
 					`
+const caseStudyBorders =css`
+					/*border: 1px white solid;
+					width: 417px;
+					height 410px;
+					position: relative;*/
+					/*&:hover {
+						border: 3px green solid;
+						}*/
+					/*margin: 20px;*/
+					 /* &:before {
+						content: '';
+						width: 3px;
+						height: 200px;
+						background: green;
+						position: absolute;
+						left: -2px;
+						top: 95px;
+					  }*/
+					/*&:after {
+					content: '';
+					width: 3px;
+					height: 200px;
+					background: green;
+					position: absolute;
+					right: -2px;
+					top: 95px;
+					}*/`
 
 const blogs = css`margin-left: 30px;
 
-			/*&:hover {
-			border:5px green solid;
-			}*/
+			
 			@media (max-width: 1600px) {
 				width: 380px;
 			}
@@ -127,58 +156,57 @@ const blogs = css`margin-left: 30px;
 
 	`
    const BlogsBackground = styled.img`margin-left: 30px;
-   position: relative;
-   top: -220px;
-   left: -5px;
-   /*left: ${props => props.count===0? '0px' : props.count===1? '0px': '0px'};*/
-  /* top: ${props => props.count===0? '100px' : props.count===1? '0px': '0px'};*/ 
-
-
-							/*&:hover {
-							border:5px green solid;
-							}*/
-							@media (max-width: 1600px) {
-								width: 390px;
-							}
-							@media (max-width: 1500px) {
-								width: 350px;
-							}
-							@media (max-width: 1400px) {
-								width: 320px;
-							}
-							@media (max-width: 1300px) {
-							width: 290px;
-							}
-							@media (max-width: 1200px) {
-							width: 270px;
-							}
-							@media (max-width: 1050px) {
-							width: 240px;
-							}
-							@media (max-width: 900px) {
-							width: 210px;
-							}
+			position: relative;
+			top: -220px;
+			left: -5px;
 							
-							@media (max-width: 750px) {
-							width: 180px;
-							}
+			@media (max-width: 1600px) {
+				width: 390px;
+			}
+			@media (max-width: 1500px) {
+				width: 350px;
+			}
+			@media (max-width: 1400px) {
+				width: 320px;
+			}
+			@media (max-width: 1300px) {
+			width: 290px;
+			}
+			@media (max-width: 1200px) {
+			width: 270px;
+			}
+			@media (max-width: 1050px) {
+			width: 240px;
+			}
+			@media (max-width: 900px) {
+			width: 210px;
+			}
+			
+			@media (max-width: 750px) {
+			width: 180px;
+			}
 
-							@media (max-width: 600px) {
-								width: 150px;
-								}`
+			@media (max-width: 600px) {
+				width: 150px;
+				}`
 	
 	
 function CardImage(props) {
 	const imageId = props.imageId;
+	const type = props.type;
 	return (
 		<div>
 			 {
 				props.type==="portfolio"?
 				<img css={portfolio}
-				src={props.imageSrc} alt={props.imageAlt} height={props.height} width={props.width} />:
+				src={props.imageSrc} alt={props.imageAlt}  />
+				:
 				props.type==="caseStudy"?
+			<div css={caseStudyBorders}>
 				<img css={caseStudy}
-				src={props.imageSrc} alt={props.imageAlt} height={props.height} width={props.width} />:
+				src={props.imageSrc} alt={props.imageAlt} height={props.height} width={props.width} />
+			</div>
+			:
 				props.type==="blogs"?
 				<img css={blogs}
 				src={props.imageSrc} alt={props.imageAlt} height={props.height} width={props.width}  />:
@@ -186,7 +214,8 @@ function CardImage(props) {
 				<Link href="/blog">
 				<BlogsBackground count={imageId}
 				src={props.imageSrc} alt={props.imageAlt} height={props.height} width={props.width}  />
-				</Link>:
+				</Link>
+				:
 				<p>Image not found</p>
 			 }
 		</div>
