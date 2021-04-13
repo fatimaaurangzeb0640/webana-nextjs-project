@@ -1,42 +1,102 @@
 import React from "react"
 /** @jsx jsx */
 import { css, jsx } from '@emotion/react'
+import Image from "next/image"
 
-const color = 'white'
+const gridContainer = css ` display: grid;
+                            grid-template-columns: 1fr;
+                            margin-top: 12.5rem;
+                            text-align: center;
+                            margin-left: 25%;
+                            margin-right: 25%;
+
+                            @media (min-width: 768px) {
+                              grid-template-columns: 1fr 1fr 1fr;
+                              margin-left: 10%;
+                              margin-right: 10%;
+                            }
+          
+                              @media (min-width: 1200px) {
+                              grid-template-columns: 1fr 1fr 1fr;
+                              margin-left: 12%;
+                              margin-right: 12%;
+                              }`
+
+const gridItem = css `
+                      text-align: center;
+                      margin-bottom: 1.875rem;
+
+                      @media (min-width: 768px) {
+                        margin-right: 1.125rem;
+                      }
+
+                      @media (min-width: 1200px) {
+                        margin-right: 1.125rem;
+                      }`
+
+const text = css `color: white;
+                  margin-top: 0.75rem;
+                  font-weight: bold;
+                  font-size: 1.125rem;
+                  padding-left: 1.875rem;
+                  padding-right: 1.875rem;
+                 /* width: 23.125rem;*/
+                  text-align: center;
+
+                  @media (max-width: 768px){
+                    font-size: 1.25rem; 
+                    margin-top: 0.9375rem;
+                    margin-bottom: 0.9375rem;
+                  }`
+
 
 function CaseStudyCard(props) {
 	return (
-		<div>
-			<img
-			 css={css`
-			 margin-left: 10px;
-             
-			 &:hover {
-				border:5px green solid;
-                
-			  }
-              @media (max-width: 1400px) {
-                width: 350px;
-              }
-              @media (max-width: 1200px) {
-                width: 300px;
-              }
-              @media (max-width: 1100px) {
-                width: 260px;
-              }
-              @media (max-width: 1000px) {
-                width: 230px;
-              }
-              @media (max-width: 800px) {
-                width: 200px;
-              }
-              @media (max-width: 670px) {
-                width: 170px;
-              }
-			 
-		   `}
-			 src={props.imageSrc} alt={props.imageAlt} height={410} width={410} />
-			
+    
+		<div css ={css`@media (min-width: 768px) {
+                    height: 93.75rem;
+                    }
+                    @media (min-width: 1200px) {
+                    height: 75rem;
+                    }`}>
+		 	<div css={css`
+              text-align: center;
+              font-family: 'Green Lantern';
+              color: #16f533;
+              font-size: 2rem;
+              padding: 0.5rem;
+              `}>
+        OUR CASE STUDIES
+      </div>
+
+      <div css={gridContainer}>
+
+        <div css={gridItem}>
+
+          <Image  src="/images/caseStudy/CaseStudy1.png" alt="Portfolio Image 1" width={410} height={410}></Image>
+
+          <div css={text}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin aliquet magna</div>
+
+        </div>
+
+        <div css={gridItem}>
+
+          <Image  src="/images/caseStudy/CaseStudy2.png" alt="Portfolio Image 2" width={410} height={410}></Image>
+
+          <div css={text}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin aliquet magna</div>
+
+        </div>
+
+        <div css={gridItem}>
+
+          <Image  src="/images/caseStudy/CaseStudy3.png" alt="Portfolio Image 3" width={410} height={410}></Image>
+
+          <div css={text}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin aliquet magna</div>
+
+        </div>
+
+      </div>
+
 		</div>
 	);
 }
