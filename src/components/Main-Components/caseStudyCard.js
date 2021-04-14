@@ -5,7 +5,7 @@ import Image from "next/image"
 
 const gridContainer = css ` display: grid;
                             grid-template-columns: 1fr;
-                            margin-top: 12.5rem;
+                            margin-top: 9.375rem;
                             text-align: center;
                             margin-left: 25%;
                             margin-right: 25%;
