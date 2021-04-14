@@ -8,7 +8,7 @@ function Main() {
 			<Link href="/sign-up">Sign-Up page is here</Link>
 			<p><Link href="/portfolio">Click here to check the Portfolio section</Link></p>
 			<p><Link href="/caseStudy">Click here to check the Case Study section</Link></p>
-			<p><Link href="/blogs2">Click here to check the Blogs section</Link></p>
+			<p><Link href="/blogs">Click here to check the Blogs section</Link></p>
 		</div>
 	);
 }

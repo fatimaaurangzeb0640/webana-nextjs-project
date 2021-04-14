@@ -30,7 +30,7 @@ const gridContainer = css`
 const gridItem = css `
                     /*border: 1px solid red;*/
                     text-align: center;
-                    margin-bottom: 1.875rem;
+                    /*margin-bottom: 1.875rem;*/
 
                     @media (min-width: 768px) {
                         margin-right: 1.125rem;
@@ -70,18 +70,12 @@ const blogImage = css `
                     margin-left: 0px;
                      position: absolute;
                     /* top: 1.3125rem;*/ /* 21px */
-                       top: 9%;
-                       left: 2.3%;
-                       right: 2.3%;
-                       @media (max-width: 768px)
-                      {
-                        left: 1%;
-                        right: 1%;
-                      }
+                       bottom: 11%;
+                       left: 1%;
+                       right: 1%;
                     `
 
 const blogImageBg = css `
-                        
                         `
 
 
