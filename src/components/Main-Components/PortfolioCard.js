@@ -56,13 +56,11 @@ function PortfolioCard(props) {
 	return (
         <div
         css={css`
+        height: 93.75rem;
+        @media (max-width: 768px) {
+            height: 196.875rem;
+            }
         /*border: 1px solid black;*/
-        @media (min-width: 768px) {
-         height: 93.75rem;
-         }
-        @media (min-width: 1200px) {
-         height: 62.5rem;
-         }
         `}>
 
             <div css={css`

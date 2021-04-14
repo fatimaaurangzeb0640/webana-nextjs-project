@@ -53,12 +53,10 @@ const text = css `color: white;
 function CaseStudyCard(props) {
 	return (
     
-		<div css ={css`@media (min-width: 768px) {
-                    height: 93.75rem;
-                    }
-                    @media (min-width: 1200px) {
-                    height: 75rem;
-                    }`}>
+		<div css ={css`height: 93.75rem;
+    @media (max-width: 768px) {
+        height: 196.875rem;
+        }`}>
 		 	<div css={css`
               text-align: center;
               font-family: 'Green Lantern';
