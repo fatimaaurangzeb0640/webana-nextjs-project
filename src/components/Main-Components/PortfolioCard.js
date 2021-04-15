@@ -87,6 +87,7 @@ function PortfolioCard(props) {
         five: false
     });
 
+
 	return (
         <div
         css={css`
@@ -119,7 +120,8 @@ function PortfolioCard(props) {
               
                 <div    css={gridItem}
                         onMouseEnter={() => setIsShown({...isShown, two:true})}
-                        onMouseLeave={() => setIsShown({...isShown, two:false})}>
+                        onMouseLeave={() => setIsShown({...isShown, two:false})}
+                        >
                     <Div count='2'>
                         <Image css={img} src="/images/portfolio/Portfolio2.png" alt="Portfolio Image 2" width={260} height={410} />
                     </Div>
@@ -128,7 +130,8 @@ function PortfolioCard(props) {
 
                 <div    css={gridItem}
                         onMouseEnter={() => setIsShown({...isShown, three:true})}
-                        onMouseLeave={() => setIsShown({...isShown, three:false})}>
+                        onMouseLeave={() => setIsShown({...isShown, three:false})}
+                >
                     <Div count='3'>
                         <Image css={img} src="/images/portfolio/Portfolio3.png" alt="Portfolio Image 3" width={260} height={410} />
                     </Div>
@@ -138,6 +141,7 @@ function PortfolioCard(props) {
                 <div    css={gridItem}
                         onMouseEnter={() => setIsShown({...isShown, four:true})}
                         onMouseLeave={() => setIsShown({...isShown, four:false})}>
+
                     <Div count='4'>
                         <Image css={img} src="/images/portfolio/Portfolio4.png" alt="Portfolio Image 4" width={260} height={410} />
                     </Div>

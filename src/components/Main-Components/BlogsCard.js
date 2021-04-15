@@ -63,7 +63,10 @@ const imageDiv = css `
                       /*@media (max-width: 768px)
                       {
                         margin-left: 45px;
-                      }*/`
+                      }*/
+                      &:hover {
+						filter: saturate(150%);
+					}`
                       
                     
 const blogImage = css `
