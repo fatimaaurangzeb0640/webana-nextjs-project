@@ -79,14 +79,19 @@ const img = css`    &:hover {
 
 	
 function PortfolioCard(props) {
-    const [isShown, setIsShown] = useState({
+    /*const [isShown, setIsShown] = useState({
         one: false,
         two: false,
         three: false,
         four: false,
         five: false
     });
-
+*/
+const [isShown1, setIsShown1] = useState(false);
+const [isShown2, setIsShown2] = useState(false);
+const [isShown3, setIsShown3] = useState(false);
+const [isShown4, setIsShown4] = useState(false);
+const [isShown5, setIsShown5] = useState(false);
 
 	return (
         <div
@@ -110,51 +115,61 @@ function PortfolioCard(props) {
 
             <div css={gridContainer}>  
                 <div    css={gridItem}
-                        onMouseEnter={() => setIsShown({...isShown, one:true})}
-                        onMouseLeave={() => setIsShown({...isShown, one:false})}>
+                        /*onMouseEnter={() => setIsShown({...isShown, one:true})}
+                        onMouseLeave={() => setIsShown({...isShown, one:false})}*/
+                        onMouseEnter={() => setIsShown1(true)}
+                        onMouseLeave={() => setIsShown1(false)}>
                     <Div count='1'>
                         <Image css={img}  src="/images/portfolio/Portfolio1.png" alt="Portfolio Image 1" width={260} height={410} />
                     </Div>
-                    {isShown.one && (<MagnifyingGlassIcon></MagnifyingGlassIcon>)}
+                    {isShown1 && (<MagnifyingGlassIcon></MagnifyingGlassIcon>)}
                 </div>
               
                 <div    css={gridItem}
-                        onMouseEnter={() => setIsShown({...isShown, two:true})}
-                        onMouseLeave={() => setIsShown({...isShown, two:false})}
+                        /*onMouseEnter={() => setIsShown({...isShown, two:true})}
+                        onMouseLeave={() => setIsShown({...isShown, two:false})}*/
+                        onMouseEnter={() => setIsShown2(true)}
+                        onMouseLeave={() => setIsShown2(false)}
                         >
                     <Div count='2'>
                         <Image css={img} src="/images/portfolio/Portfolio2.png" alt="Portfolio Image 2" width={260} height={410} />
                     </Div>
-                    {isShown.two && (<MagnifyingGlassIcon></MagnifyingGlassIcon>)}
+                    {isShown2 && (<MagnifyingGlassIcon></MagnifyingGlassIcon>)}
                 </div>
 
                 <div    css={gridItem}
-                        onMouseEnter={() => setIsShown({...isShown, three:true})}
-                        onMouseLeave={() => setIsShown({...isShown, three:false})}
+                        /*onMouseEnter={() => setIsShown({...isShown, three:true})}
+                        onMouseLeave={() => setIsShown({...isShown, three:false})}*/
+                        onMouseEnter={() => setIsShown3(true)}
+                        onMouseLeave={() => setIsShown3(false)}
                 >
                     <Div count='3'>
                         <Image css={img} src="/images/portfolio/Portfolio3.png" alt="Portfolio Image 3" width={260} height={410} />
                     </Div>
-                    {isShown.three && (<MagnifyingGlassIcon></MagnifyingGlassIcon>)}
+                    {isShown3 && (<MagnifyingGlassIcon></MagnifyingGlassIcon>)}
                 </div>
 
                 <div    css={gridItem}
-                        onMouseEnter={() => setIsShown({...isShown, four:true})}
-                        onMouseLeave={() => setIsShown({...isShown, four:false})}>
+                        /*onMouseEnter={() => setIsShown({...isShown, four:true})}
+                        onMouseLeave={() => setIsShown({...isShown, four:false})}*/
+                        onMouseEnter={() => setIsShown4(true)}
+                        onMouseLeave={() => setIsShown4(false)}>
 
                     <Div count='4'>
                         <Image css={img} src="/images/portfolio/Portfolio4.png" alt="Portfolio Image 4" width={260} height={410} />
                     </Div>
-                    {isShown.four && (<MagnifyingGlassIcon></MagnifyingGlassIcon>)}
+                    {isShown4 && (<MagnifyingGlassIcon></MagnifyingGlassIcon>)}
                 </div>
 
                 <div    css={gridItem}
-                        onMouseEnter={() => setIsShown({...isShown, five:true})}
-                        onMouseLeave={() => setIsShown({...isShown, five:false})}>
+                        /*onMouseEnter={() => setIsShown({...isShown, five:true})}
+                        onMouseLeave={() => setIsShown({...isShown, five:false})}*/
+                        onMouseEnter={() => setIsShown5(true)}
+                        onMouseLeave={() => setIsShown5(false)}>
                     <Div count='5'>
                         <Image css={img}  src="/images/portfolio/Portfolio5.png" alt="Portfolio Image 5" width={260} height={410} />
                     </Div>
-                    {isShown.five && (<MagnifyingGlassIcon></MagnifyingGlassIcon>)}
+                    {isShown5 && (<MagnifyingGlassIcon></MagnifyingGlassIcon>)}
                 </div>
             </div>
 
