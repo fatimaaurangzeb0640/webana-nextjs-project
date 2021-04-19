@@ -42,10 +42,11 @@ const gridItem = css `
   
 const text = css `  color: white;
                     margin-top: 1.875rem;
-                    font-weight: bold;
+                    /*font-weight: bold;*/
                     font-size: 1.125rem;
                     padding-left: 1.875rem;
                     padding-right: 1.875rem;
+                    font-family:'Raleway', Helvetica, Arial, sans-serif;
                     /* width: 23.125rem;*/
                     text-align: center;
 
@@ -53,7 +54,12 @@ const text = css `  color: white;
                         font-size: 1.25rem; 
                         margin-top: 0.9375rem;
                         margin-bottom: 0.9375rem;
-                    }`
+                    }
+                    @media (max-width: 545px){
+                        font-size: 0.875rem; 
+                        margin-top: 0.9375rem;
+                        margin-bottom: 0.9375rem;
+                      }`
 
 const imageDiv = css `
                      /*border: 1px solid white;*/

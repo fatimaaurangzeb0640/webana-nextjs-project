@@ -9,6 +9,7 @@ const gridContainer = css` display: grid;
                             text-align: center;
                             margin-left: 25%;
                             margin-right: 25%;
+                            font-family: Green Lantern;
                             @media (min-width: 768px) {
                               grid-template-columns: 1fr 1fr 1fr;
                               margin-left: 10%;
@@ -25,36 +26,48 @@ const gridItem = css`
                     
                       text-align: center;
                       margin-bottom: 1.875rem;
+                      
                       @media (min-width: 768px) {
                         margin-right: 1.125rem;
                       }
                       @media (min-width: 1200px) {
-                        margin-right: 1.125rem;
+                        /*margin-right: 1.125rem;*/
+                        margin-left: 4%;
+                        margin-right: 4%;
                       }`
 
-const image = css`/*border: 3px #16f533 solid;
-                  
+const image = css`/*border: 3px #16f533 solid;*/
+                  /*text-align: center;*/
                   &:hover {
-                  border-right: 2px #16f533 solid;
-                  border-left: 2px #16f533 solid;
-                  padding-left: 0%;
-                  padding right: 0%;
-                  }*/
+                    border-radius: 10px;
+                  border-right: 0.1rem #16f533 solid;
+                  border-left: 0.1rem #16f533 solid;
+                  
+                  /*padding-left: 0%;
+                  padding right: 0%;*/
+                  }
                   `
 
 const text = css`color: white;
                   margin-top: 0.75rem;
-                  font-weight: bold;
+                  /*font-weight: bold;*/
                   font-size: 1.125rem;
                   padding-left: 1.875rem;
                   padding-right: 1.875rem;
+                  font-family:'Raleway', Helvetica, Arial, sans-serif;
                  /* width: 23.125rem;*/
                   text-align: center;
                   @media (max-width: 768px){
                     font-size: 1.25rem; 
                     margin-top: 0.9375rem;
                     margin-bottom: 0.9375rem;
-                  }`
+                  }
+                  @media (max-width: 545px){
+                    font-size: 0.875rem; 
+                    margin-top: 0.9375rem;
+                    margin-bottom: 0.9375rem;
+                  }
+                  `
 
 
 function CaseStudyCard(props) {
@@ -78,7 +91,9 @@ function CaseStudyCard(props) {
 
         <div css={gridItem}>
 
-          <div css={image}><Image  src="/images/caseStudy/CaseStudy1.png" alt="Portfolio Image 1" width={410} height={410}></Image></div>
+          <div css={image}>
+            <Image src="/images/caseStudy/CaseStudy1.png" alt="Portfolio Image 1" width={410} height={410}></Image>
+          </div>
 
           <div css={text}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin aliquet magna</div>
 
